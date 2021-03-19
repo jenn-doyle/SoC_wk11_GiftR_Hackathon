@@ -50,7 +50,7 @@ function App() {
             <li>
               <Link to="/main">Main</Link>
             </li>
-            <li><a href="https://www.grindr.com/">Affiliations</a></li> 
+            <li><a href="https://www.grindr.com/"target="_blank">Affiliations</a></li> 
             <li>Contact Us</li>
           </ul>
         </nav>
