@@ -5,8 +5,7 @@ import About from "../About";
 import Main from "../Main";
 import Contact from "../Contact";
 import LoginButton from "../LoginButton";
-import LogoutButton from "../LogoutButton";
-import UserProfile from "../UserProfile";
+import AuthButton from "../AuthButton";
 import { useAuth0 } from "@auth0/auth0-react";
 
 import {
@@ -19,15 +18,12 @@ import {
 function App() {
   const { user, isAuthenticated, isLoading } = useAuth0();
 
- 
   return (
     <div className="App">
       <Router>
       <div>
       <h1>G~I~F~T~<span className="r">R</span></h1>
-      <LoginButton></LoginButton>
-      <UserProfile user={user} isAuthenticated={isAuthenticated} isLoading={isLoading}></UserProfile>
-      <LogoutButton></LogoutButton>
+      <AuthButton user={user} isAuthenticated={isAuthenticated} isLoading={isLoading}></AuthButton>
         <nav>
           <ul>
             <li>
