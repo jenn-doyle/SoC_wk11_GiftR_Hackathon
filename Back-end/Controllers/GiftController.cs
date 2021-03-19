@@ -62,6 +62,7 @@ public class GiftController : ControllerBase
     {
         try
         {
+            gift.Id = id;
             var editGift = await _giftRepository.Update(gift);
             return Ok(editGift);
         }
