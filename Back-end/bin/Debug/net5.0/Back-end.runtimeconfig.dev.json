@@ -1,8 +1,8 @@
 {
   "runtimeOptions": {
     "additionalProbingPaths": [
-      "/Users/roxy/.dotnet/store/|arch|/|tfm|",
-      "/Users/roxy/.nuget/packages"
+      "C:\\Users\\Stella\\.dotnet\\store\\|arch|\\|tfm|",
+      "C:\\Users\\Stella\\.nuget\\packages"
     ]
   }
 }

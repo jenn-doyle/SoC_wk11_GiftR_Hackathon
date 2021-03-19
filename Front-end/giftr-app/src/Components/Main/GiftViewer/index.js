@@ -38,9 +38,9 @@ function GiftViewer({ id }) {
       <ul>
         <li> {gift.person} </li>
         <li> {gift.giftName} </li>
-        <li> {gift.giftLink} </li>
+        <li> <a href={gift.giftLink} target="_blank">Gift Website</a>  </li>
         <li> 
-            <img src={gift.imageLink} alt="gift"/> 
+            <img src={gift.imageLink} alt="gift" width="500px" height ="500px"/> 
         </li>
       </ul>
     </div>
