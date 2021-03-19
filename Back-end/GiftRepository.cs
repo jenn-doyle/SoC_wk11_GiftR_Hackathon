@@ -17,22 +17,22 @@ public class GiftRepository : BaseRepository, IRepository<Gift>
         return gifts;
     }
 
-    public async Task<Gift> Get(int rand)
+    public async Task<Gift> Get(int pc)
     {
         using var connection = CreateConnection();
-        return await connection.QuerySingleAsync<Gift>("SELECT * FROM Gifts ORDER BY RANDOM() LIMIT 1;");
+        return await connection.QuerySingleAsync<Gift>("SELECT * FROM Gifts WHERE PersonCode=@PC ORDER BY RANDOM() LIMIT 1;", new { PC = pc });
 
     }
-    public async Task<Gift> Insert(Gift gift)
+    public async Task<Gift> Insert(Gift giftObject)
     // (string Title, string Artist, int SongLengthCode, string Link, string SuggestedBy)
     {
         using var connection = CreateConnection();
-        return await connection.QuerySingleAsync<Gift>("INSERT INTO Gifts (Gift) VALUES (@Gift); SELECT * FROM Songs LIMIT 1", gift);
+        return await connection.QuerySingleAsync<Gift>("INSERT INTO Gifts (Person, PersonCode, GiftName, ImageLink, GiftLink) VALUES (@Person, @PersonCode, @GiftName, @ImageLink, @GiftLink); SELECT * FROM Gifts LIMIT 1;", giftObject);
     }
 
     public async Task<Gift> Update(Gift gift)
     {
         using var connection = CreateConnection();
-        return await connection.QuerySingleAsync<Gift>("UPDATE Gifts SET Gift = @Gift WHERE Id = @Id;", gift);
+        return await connection.QuerySingleAsync<Gift>("UPDATE Gifts SET Person = @Person, PersonCode = @PersonCode, GiftName = @GiftName, ImageLink = @ImageLink, GiftLink = @GiftLink WHERE Id = @Id;", gift);
     }
 }

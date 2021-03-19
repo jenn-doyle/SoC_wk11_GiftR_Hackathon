@@ -22,12 +22,12 @@ public class GiftController : ControllerBase
         return _giftRepository.GetAll();
     }
 
-    [HttpGet("{rand}")]
-    public async Task<IActionResult> Get(int rand)
+    [HttpGet("{pc}")]
+    public async Task<IActionResult> Get(int pc)
     {
         try
         {
-            var gift = await _giftRepository.Get(rand);
+            var gift = await _giftRepository.Get(pc);
             return Ok(gift);
         }
         catch (Exception)
@@ -43,7 +43,7 @@ public class GiftController : ControllerBase
         try
         {
             Console.WriteLine(ModelState.IsValid);
-            var insertGift = await _giftRepository.Insert(new Gift { Gift = gift.Gift });
+            var insertGift = await _giftRepository.Insert(gift);
             return Ok(insertGift);
 
         }
@@ -62,7 +62,8 @@ public class GiftController : ControllerBase
     {
         try
         {
-            var editGift = await _giftRepository.Update(new Gift { Gift = gift.Gift });
+            gift.Id = id;
+            var editGift = await _giftRepository.Update(gift);
             return Ok(editGift);
         }
         catch (Exception error)
