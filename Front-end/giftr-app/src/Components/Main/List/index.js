@@ -38,10 +38,13 @@ function GiftViewer({ id }) {
       <ul>
         <li> {gift.person} </li>
         <li> {gift.giftName} </li>
-        <li> {gift.giftLink} </li>
+        
         <li> 
             <img src={gift.imageLink} alt="gift"/> 
         </li>
+        <li> 
+        <a href={gift.giftLink}>Gift Website</a> 
+          </li>
       </ul>
     </div>
   );
