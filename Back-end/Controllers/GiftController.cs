@@ -1,39 +1,76 @@
-﻿using System;
-using System.Collections.Generic;
-using System.Linq;
-using System.Threading.Tasks;
+﻿using System.Collections.Generic;
 using Microsoft.AspNetCore.Mvc;
-using Microsoft.Extensions.Logging;
+using System;
+using System.Threading.Tasks;
+using System.Numerics;
 
-namespace Back_end.Controllers
+
+[ApiController]
+[Route("gifts")]
+public class GiftController : ControllerBase
 {
-    [ApiController]
-    [Route("[controller]")]
-    public class WeatherForecastController : ControllerBase
+    private readonly IRepository<Gift> _giftRepository;
+
+    public GiftController(IRepository<Gift> giftRepository)
     {
-        private static readonly string[] Summaries = new[]
-        {
-            "Freezing", "Bracing", "Chilly", "Cool", "Mild", "Warm", "Balmy", "Hot", "Sweltering", "Scorching"
-        };
+        _giftRepository = giftRepository;
+    }
 
-        private readonly ILogger<WeatherForecastController> _logger;
+    [HttpGet]
+    public IEnumerable<Gift> GetAll()
+    {
+        return _giftRepository.GetAll();
+    }
 
-        public WeatherForecastController(ILogger<WeatherForecastController> logger)
+    [HttpGet("{rand}")]
+    public async Task<IActionResult> Get(int rand)
+    {
+        try
         {
-            _logger = logger;
+            var gift = await _giftRepository.Get(rand);
+            return Ok(gift);
         }
-
-        [HttpGet]
-        public IEnumerable<WeatherForecast> Get()
+        catch (Exception)
         {
-            var rng = new Random();
-            return Enumerable.Range(1, 5).Select(index => new WeatherForecast
-            {
-                Date = DateTime.Now.AddDays(index),
-                TemperatureC = rng.Next(-20, 55),
-                Summary = Summaries[rng.Next(Summaries.Length)]
-            })
-            .ToArray();
+            //handle exception
+            return NotFound();
+        }
+    }
+
+    [HttpPost]
+    public async Task<IActionResult> Insert([FromBody] Gift gift)
+    {
+        try
+        {
+            Console.WriteLine(ModelState.IsValid);
+            var insertGift = await _giftRepository.Insert(new Gift { Gift = gift.Gift });
+            return Ok(insertGift);
+
+        }
+        catch (Exception error)
+        {
+            Console.WriteLine(error.Message);
+            Console.WriteLine(error.StackTrace);
+            //handle exception
+            return BadRequest();
+        }
+    }
+
+    //POTENTIAL STRETCH GOAL
+    [HttpPut("{id}")]
+    public async Task<IActionResult> Update(long id, [FromBody] Gift gift)
+    {
+        try
+        {
+            var editGift = await _giftRepository.Update(new Gift { Gift = gift.Gift });
+            return Ok(editGift);
+        }
+        catch (Exception error)
+        {
+            Console.WriteLine(error.Message);
+            Console.WriteLine(error.StackTrace);
+            //handle exception
+            return NotFound("no gift updated");
         }
     }
 }

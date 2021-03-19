@@ -1,15 +1,18 @@
 {
   "version": 2,
-  "dgSpecHash": "Euwam/8lHBZp7SwKYblF81/xCUkMYNlQL446JM0kSAE8xpPY093so0vMIepd3physIiy2dvxAsC8LPYRH/fl6Q==",
+  "dgSpecHash": "bzGkp5sFajR0X4wFXgiSgub85QgSz7Axp3OpLaIgPaWFi2BrEHLHLMde9Lnd+8pHkURZZpBqGNe7lsnGsiZM5g==",
   "success": true,
   "projectFilePath": "C:\\Users\\jennd\\Desktop\\Projects\\week11\\19032021\\w11d5_levelupathon_hackathon-the-dj-chipmunks\\Back-end\\Back-end.csproj",
   "expectedPackageFiles": [
+    "C:\\Users\\jennd\\.nuget\\packages\\dapper\\2.0.78\\dapper.2.0.78.nupkg.sha512",
     "C:\\Users\\jennd\\.nuget\\packages\\microsoft.extensions.apidescription.server\\3.0.0\\microsoft.extensions.apidescription.server.3.0.0.nupkg.sha512",
     "C:\\Users\\jennd\\.nuget\\packages\\microsoft.openapi\\1.2.3\\microsoft.openapi.1.2.3.nupkg.sha512",
+    "C:\\Users\\jennd\\.nuget\\packages\\npgsql\\5.0.3\\npgsql.5.0.3.nupkg.sha512",
     "C:\\Users\\jennd\\.nuget\\packages\\swashbuckle.aspnetcore\\5.6.3\\swashbuckle.aspnetcore.5.6.3.nupkg.sha512",
     "C:\\Users\\jennd\\.nuget\\packages\\swashbuckle.aspnetcore.swagger\\5.6.3\\swashbuckle.aspnetcore.swagger.5.6.3.nupkg.sha512",
     "C:\\Users\\jennd\\.nuget\\packages\\swashbuckle.aspnetcore.swaggergen\\5.6.3\\swashbuckle.aspnetcore.swaggergen.5.6.3.nupkg.sha512",
-    "C:\\Users\\jennd\\.nuget\\packages\\swashbuckle.aspnetcore.swaggerui\\5.6.3\\swashbuckle.aspnetcore.swaggerui.5.6.3.nupkg.sha512"
+    "C:\\Users\\jennd\\.nuget\\packages\\swashbuckle.aspnetcore.swaggerui\\5.6.3\\swashbuckle.aspnetcore.swaggerui.5.6.3.nupkg.sha512",
+    "C:\\Users\\jennd\\.nuget\\packages\\system.runtime.compilerservices.unsafe\\4.6.0\\system.runtime.compilerservices.unsafe.4.6.0.nupkg.sha512"
   ],
   "logs": []
 }
