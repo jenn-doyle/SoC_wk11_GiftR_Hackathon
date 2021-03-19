@@ -287,19 +287,19 @@
     ]
   },
   "packageFolders": {
-    "C:\\Users\\jennd\\.nuget\\packages\\": {}
+    "/Users/roxy/.nuget/packages/": {}
   },
   "project": {
     "version": "1.0.0",
     "restore": {
-      "projectUniqueName": "C:\\Users\\jennd\\Desktop\\Projects\\week11\\19032021\\w11d5_levelupathon_hackathon-the-dj-chipmunks\\Back-end\\Back-end.csproj",
+      "projectUniqueName": "/Users/roxy/SchoolOfCode/Week11/Day5/w11d5_levelupathon_hackathon-the-dj-chipmunks/Back-end/Back-end.csproj",
       "projectName": "Back-end",
-      "projectPath": "C:\\Users\\jennd\\Desktop\\Projects\\week11\\19032021\\w11d5_levelupathon_hackathon-the-dj-chipmunks\\Back-end\\Back-end.csproj",
-      "packagesPath": "C:\\Users\\jennd\\.nuget\\packages\\",
-      "outputPath": "C:\\Users\\jennd\\Desktop\\Projects\\week11\\19032021\\w11d5_levelupathon_hackathon-the-dj-chipmunks\\Back-end\\obj\\",
+      "projectPath": "/Users/roxy/SchoolOfCode/Week11/Day5/w11d5_levelupathon_hackathon-the-dj-chipmunks/Back-end/Back-end.csproj",
+      "packagesPath": "/Users/roxy/.nuget/packages/",
+      "outputPath": "/Users/roxy/SchoolOfCode/Week11/Day5/w11d5_levelupathon_hackathon-the-dj-chipmunks/Back-end/obj/",
       "projectStyle": "PackageReference",
       "configFilePaths": [
-        "C:\\Users\\jennd\\AppData\\Roaming\\NuGet\\NuGet.Config"
+        "/Users/roxy/.nuget/NuGet/NuGet.Config"
       ],
       "originalTargetFrameworks": [
         "net5.0"
@@ -354,7 +354,7 @@
             "privateAssets": "all"
           }
         },
-        "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\5.0.104\\RuntimeIdentifierGraph.json"
+        "runtimeIdentifierGraphPath": "/usr/local/share/dotnet/sdk/5.0.102/RuntimeIdentifierGraph.json"
       }
     }
   }
