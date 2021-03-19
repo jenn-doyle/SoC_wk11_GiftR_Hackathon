@@ -1,13 +1,8 @@
 {
   "runtimeOptions": {
     "additionalProbingPaths": [
-<<<<<<< HEAD
-      "C:\\Users\\Stella\\.dotnet\\store\\|arch|\\|tfm|",
-      "C:\\Users\\Stella\\.nuget\\packages"
-=======
-      "C:\\Users\\jennd\\.dotnet\\store\\|arch|\\|tfm|",
-      "C:\\Users\\jennd\\.nuget\\packages"
->>>>>>> ef87dead21e3801548714f50ea592a7c3c3c1e5f
+      "/Users/roxy/.dotnet/store/|arch|/|tfm|",
+      "/Users/roxy/.nuget/packages"
     ]
   }
 }

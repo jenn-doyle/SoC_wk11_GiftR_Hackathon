@@ -3,13 +3,15 @@ import LoginButton from '../LoginButton';
 import LogoutButton from '../LogoutButton';
 import UserProfile from '../UserProfile';
 import css from './auth.module.css';
+import {useAuthContext} from '../../authContext';
 
-function AuthButton({user, isLoading, isAuthenticated}){
+function AuthButton(){
+    const [isAuthenticated] = useAuthContext();
     if (isAuthenticated){
         return (
             <div className={css.logout}>
                 <LogoutButton></LogoutButton>
-                <UserProfile user={user} isAuthenticated={isAuthenticated} isLoading={isLoading}></UserProfile>
+                <UserProfile></UserProfile>
             </div>
         )
     }

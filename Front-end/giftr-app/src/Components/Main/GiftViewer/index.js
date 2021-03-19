@@ -36,13 +36,9 @@ function GiftViewer({ id }) {
   return (
     <div  className="gift-viewer">
       <ul>
-        <li> {gift.person} </li>
+        {/* <li> {gift.person} </li> */}
         <li> {gift.giftName} </li>
-<<<<<<< HEAD:Front-end/giftr-app/src/Components/Main/GiftViewer/index.js
-        <li> <a href={gift.giftLink} target="_blank">Gift Website</a>  </li>
-=======
-        
->>>>>>> ef87dead21e3801548714f50ea592a7c3c3c1e5f:Front-end/giftr-app/src/Components/Main/List/index.js
+        <li> <a href={gift.giftLink} rel="noreferrer" target="_blank">Gift Website</a>  </li>
         <li> 
             <img src={gift.imageLink} alt="gift" width="500px" height ="500px"/> 
         </li>

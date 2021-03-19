@@ -1,12 +1,11 @@
 import React from "react";
 import "./App.css";
-
 import About from "../About";
 import Main from "../Main";
 import Contact from "../Contact";
 import LoginButton from "../LoginButton";
 import AuthButton from "../AuthButton";
-import { useAuth0 } from "@auth0/auth0-react";
+import {AuthContextProvider} from "../../authContext";
 
 import {
   BrowserRouter as Router,
@@ -16,14 +15,13 @@ import {
 } from "react-router-dom";
 
 function App() {
-  const { user, isAuthenticated, isLoading } = useAuth0();
 
   return (
-    <div className="App">
+    <AuthContextProvider className="App">
       <Router>
       <div>
       <h1>G~I~F~T~<span className="r">R</span></h1>
-      <AuthButton user={user} isAuthenticated={isAuthenticated} isLoading={isLoading}></AuthButton>
+      <AuthButton/>
         <nav>
           <ul>
             <li>
@@ -52,9 +50,8 @@ function App() {
         </Switch>
       </div>
     </Router>
-     
 
-    </div>
+    </AuthContextProvider>
   );
 
 }
