@@ -1,0 +1,13 @@
+.button {
+    font-size: 2em;
+    font-family: 'Cormorant Unicase', serif;
+    padding: 20px;
+}
+
+.button:hover {
+cursor: pointer;
+    background-color: #ffa5a5;
+    color: white;
+    transition: ease-in-out;
+    transition-duration: 0.5s;
+}
