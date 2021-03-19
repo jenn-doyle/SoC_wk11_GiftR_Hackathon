@@ -1,34 +1,13 @@
-
-// import './App.css';
-
-// function App() {
-//   return (
-//     <div className="App">
-//       <header className="App-header">
-     
-//         <p>
-//           Edit <code>src/App.js</code> and save to reload.
-//         </p>
-//         <a
-//           className="App-link"
-//           href="https://reactjs.org"
-//           target="_blank"
-//           rel="noopener noreferrer"
-//         >
-//           Learn React
-//         </a>
-//       </header>
-//     </div>
-//   );
-// }
-
-// export default App;
-
 import React from "react";
 import "./App.css";
 
 import About from "../About";
 import Main from "../Main";
+import Contact from "../Contact";
+import LoginButton from "../LoginButton";
+import LogoutButton from "../LogoutButton";
+import UserProfile from "../UserProfile";
+import { useAuth0 } from "@auth0/auth0-react";
 
 import {
   BrowserRouter as Router,
@@ -38,10 +17,17 @@ import {
 } from "react-router-dom";
 
 function App() {
+  const { user, isAuthenticated, isLoading } = useAuth0();
+
+ 
   return (
     <div className="App">
       <Router>
       <div>
+      <h1>G~I~F~T~<span className="r">R</span></h1>
+      <LoginButton></LoginButton>
+      <UserProfile user={user} isAuthenticated={isAuthenticated} isLoading={isLoading}></UserProfile>
+      <LogoutButton></LogoutButton>
         <nav>
           <ul>
             <li>
@@ -51,7 +37,7 @@ function App() {
               <Link to="/main">Main</Link>
             </li>
             <li><a href="https://www.grindr.com/"target="_blank">Affiliations</a></li> 
-            <li>Contact Us</li>
+            <li><Link to="/contact">Contact Us</Link></li>
           </ul>
         </nav>
 
@@ -60,6 +46,9 @@ function App() {
         <Switch>
           <Route path="/main">
             <Main />
+          </Route>
+          <Route path="/contact">
+            <Contact />
           </Route>
           <Route path="/">
             <About />
@@ -71,6 +60,7 @@ function App() {
 
     </div>
   );
+
 }
 
 export default App;
