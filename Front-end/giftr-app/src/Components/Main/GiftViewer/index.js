@@ -45,6 +45,7 @@ function GiftViewer({ id }) {
         <li> {gift.giftName} </li>
         <br />
         <li>
+          <img src={gift.imageLink} alt="gift" width="650px" height="600px" />
         </li>
         <br />
         <li>
