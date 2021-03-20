@@ -287,19 +287,19 @@
     ]
   },
   "packageFolders": {
-    "/Users/roxy/.nuget/packages/": {}
+    "C:\\Users\\jennd\\.nuget\\packages\\": {}
   },
   "project": {
     "version": "1.0.0",
     "restore": {
-      "projectUniqueName": "/Users/roxy/SchoolOfCode/Week11/Day5/w11d5_levelupathon_hackathon-the-dj-chipmunks/Back-end/Back-end.csproj",
+      "projectUniqueName": "C:\\Users\\jennd\\Desktop\\Projects\\week11\\19032021\\w11d5_levelupathon_hackathon-the-dj-chipmunks\\Back-end\\Back-end.csproj",
       "projectName": "Back-end",
-      "projectPath": "/Users/roxy/SchoolOfCode/Week11/Day5/w11d5_levelupathon_hackathon-the-dj-chipmunks/Back-end/Back-end.csproj",
-      "packagesPath": "/Users/roxy/.nuget/packages/",
-      "outputPath": "/Users/roxy/SchoolOfCode/Week11/Day5/w11d5_levelupathon_hackathon-the-dj-chipmunks/Back-end/obj/",
+      "projectPath": "C:\\Users\\jennd\\Desktop\\Projects\\week11\\19032021\\w11d5_levelupathon_hackathon-the-dj-chipmunks\\Back-end\\Back-end.csproj",
+      "packagesPath": "C:\\Users\\jennd\\.nuget\\packages\\",
+      "outputPath": "C:\\Users\\jennd\\Desktop\\Projects\\week11\\19032021\\w11d5_levelupathon_hackathon-the-dj-chipmunks\\Back-end\\obj\\",
       "projectStyle": "PackageReference",
       "configFilePaths": [
-        "/Users/roxy/.nuget/NuGet/NuGet.Config"
+        "C:\\Users\\jennd\\AppData\\Roaming\\NuGet\\NuGet.Config"
       ],
       "originalTargetFrameworks": [
         "net5.0"
@@ -354,16 +354,8 @@
             "privateAssets": "all"
           }
         },
-        "runtimeIdentifierGraphPath": "/usr/local/share/dotnet/sdk/5.0.102/RuntimeIdentifierGraph.json"
+        "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\5.0.104\\RuntimeIdentifierGraph.json"
       }
     }
-  },
-  "logs": [
-    {
-      "code": "Undefined",
-      "level": "Warning",
-      "warningLevel": 1,
-      "message": "Problem reading the cache file /Users/roxy/SchoolOfCode/Week11/Day5/w11d5_levelupathon_hackathon-the-dj-chipmunks/Back-end/obj/project.nuget.cache : Invalid property identifier character: <. Path 'version', line 3, position 0."
-    }
-  ]
+  }
 }
