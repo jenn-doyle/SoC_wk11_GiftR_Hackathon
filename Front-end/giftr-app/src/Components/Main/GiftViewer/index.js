@@ -41,16 +41,24 @@ function GiftViewer({ id }) {
   return (
     <div className={css.giftViewer}>
       <ul>
+        <p className={css.text}>How About</p>
         <li> {gift.giftName} </li>
+        <br />
         <li>
-          <img src={gift.imageLink} alt="" width="450px" height="400px" />
         </li>
+        <br />
         <li>
           {" "}
-          <a href={gift.giftLink} rel="noreferrer" target="_blank">
+          <a
+            href={gift.giftLink}
+            rel="noreferrer"
+            target="_blank"
+            style={{ color: "#3d7ea6" }}
+          >
             Gift Website
           </a>{" "}
         </li>
+        <br />
       </ul>
     </div>
   );

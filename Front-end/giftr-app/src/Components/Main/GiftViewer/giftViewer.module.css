@@ -1,3 +1,19 @@
 .giftViewer {
-    text-align: center;
+  text-align: center;
+  font-size: 30px;
+  color: #3d7ea6;
+}
+
+.text {
+  color: #3d7ea6;
+  font-size: 1em;
+  font-weight: 600;
+  text-decoration: underline;
+  margin: 40px auto;
+  display: block;
+  padding: 10px 30px;
+  max-width: fit-content;
+  background-color: #ffa5a5;
+  border-radius: 10px;
+  box-shadow: #ffa5a5 0px 8px 24px, #ffa5a5 0px 16px 56px, #ffa5a5 0px 24px 80px;
 }

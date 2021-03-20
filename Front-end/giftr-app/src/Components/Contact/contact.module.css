@@ -1,4 +1,10 @@
 .logo {
   text-align: center;
-  margin-left: 930px;
+}
+
+h3 {
+  color: #3d7ea6;
+  font-size: 1.5em;
+  text-decoration: underline;
+  margin: 70px auto 60px;
 }
