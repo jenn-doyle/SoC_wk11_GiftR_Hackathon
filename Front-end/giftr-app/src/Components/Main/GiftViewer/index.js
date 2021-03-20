@@ -1,21 +1,22 @@
 import React, { useReducer, useEffect } from "react";
+import css from "./giftViewer.module.css";
 
 //reducer only accepts action of type Gift, with a payload of the actual gift
-function reducer(gift, action) {
+function reducer(state, action) {
   switch (action.type) {
     case "GIFT":
       return action.payload;
     default:
-      return gift;
+      return state;
   }
 }
 const INITIAL_GIFT = {
-    person: "",
-    personCode: "",
-    giftName: "",
-    giftLink: "",
-    imageLink: ""
-}
+  person: "",
+  personCode: "",
+  giftName: "",
+  giftLink: "",
+  imageLink: "",
+};
 const BACKEND_URL = "https:localhost:5001/gifts";
 
 function GiftViewer({ id }) {
@@ -33,18 +34,23 @@ function GiftViewer({ id }) {
     getGifts();
   }, [id]);
 
+  if (!gift.imageLink) {
+    return <h2>Select A Person...</h2>;
+  }
+
   return (
-    <div  className="gift-viewer">
+    <div className={css.giftViewer}>
       <ul>
-        {/* <li> {gift.person} </li> */}
         <li> {gift.giftName} </li>
-        <li> <a href={gift.giftLink} rel="noreferrer" target="_blank">Gift Website</a>  </li>
-        <li> 
-            <img src={gift.imageLink} alt="gift" width="500px" height ="500px"/> 
+        <li>
+          <img src={gift.imageLink} alt="" width="450px" height="400px" />
         </li>
-        <li> 
-        <a href={gift.giftLink}>Gift Website</a> 
-          </li>
+        <li>
+          {" "}
+          <a href={gift.giftLink} rel="noreferrer" target="_blank">
+            Gift Website
+          </a>{" "}
+        </li>
       </ul>
     </div>
   );

@@ -1,3 +1,8 @@
 .logout {
-    background-color: white;
+  float: right;
+  font-family: "Cormorant Unicase", serif;
+  font-size: 1em;
+  position: relative;
+  top: 20px;
+  background-color: #ffa5a5;
 }
